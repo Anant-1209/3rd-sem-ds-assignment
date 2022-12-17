@@ -1,14 +1,16 @@
-#include<stdio.h>                                               //header file declaration
-#include<conio.h>     
-#define SIZE 20             //size declaration
+
+#include<stdlib.h> //header file declaration
+#include<stdio.h>   //header file declaration
+#include<conio.h>   //header file declaration
+#define SIZE 5  //size declaration
 char push();
 char pop();
 char peek();
  void display();
  int top=-1;
- int stack[SIZE];    //stack declaration
+ int stack[SIZE];
 
-void main()    //main function to call stack operations
+void main()     //main function
 {
     int ch;
     while(1)
@@ -16,7 +18,7 @@ void main()    //main function to call stack operations
 
     printf("press 1 for push\n2 for pop \n 3 for peek \n 4for display \n 5 for exit");
     scanf("%d",&ch);
-    switch(ch)               //switch case
+    switch(ch)  //switch case
     {
         case 1:
         push();
@@ -39,7 +41,7 @@ void main()    //main function to call stack operations
     }
 
 }
-char push()    //push function to push the item into stack
+char push()     //push function insert element in stack
 {
     int n;
     printf("enter the item\n");
@@ -57,7 +59,7 @@ char push()    //push function to push the item into stack
 
 }
 
-char pop()   //pop function to  delete item from the stack
+char pop()      //pop function to delete element from dtack
 {
     if(top==-1)
     {
@@ -71,7 +73,7 @@ char pop()   //pop function to  delete item from the stack
     }
 
 }
-char peek()    //peek function to print top of element
+char peek()     //peek function to print top of element
 {
     if(top==-1)
     {
@@ -83,7 +85,7 @@ char peek()    //peek function to print top of element
         printf("the top item of stack is\n %d\n",stack[top]);
     }
 }
-void display()     //display function to display the stack item
+void display()      //void display
 {
     printf("\nthe elements are\n");
     for(int i=top;i>=0;i--)
